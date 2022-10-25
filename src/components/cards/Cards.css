@@ -1,0 +1,28 @@
+.card{
+  box-shadow: 1px 1px 5px grayscale;
+  margin: 5px;
+  border-radius: 2rem;
+}
+
+.cards{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0
+}
+
+.cards-item{
+  display: flex;
+  padding:1rem
+}
+
+.card-content-types p{
+  font-family: monospace;
+  background-color: blueviolet;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 1rem;
+  border-radius:1rem
+}
