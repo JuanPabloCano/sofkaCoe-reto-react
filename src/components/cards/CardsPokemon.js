@@ -1,10 +1,17 @@
 import React from 'react';
 import { UseFetch } from '../UseFetch';
+import { Route, Router, Routes, useNavigate } from 'react-router-dom';
 import PokemonInfo from './PokemonInfo';
 
 const CardsPokemon = ({ url }) => {
 	const state = UseFetch(url);
 	const { loading, data } = state;
+	const navigate = useNavigate();
+	const routeChange = () => {
+		//PokemonInfo(data)
+		const path = '/pokemon';
+		navigate(path);
+	};
 
 	return (
 		<div>
@@ -24,12 +31,12 @@ const CardsPokemon = ({ url }) => {
 						</p>
 					</div>
 					<div className="card-content-types">
-						{' '}
 						<p>{data.types.map((item) => item.type.name + ' ')}</p>
 					</div>
 					<div className="container m-auto">
 						<button
-							onClick={() => PokemonInfo(data)}
+							//onClick={() => PokemonInfo(data)}
+							onClick={routeChange}
 							className="m-2 btn btn-dark"
 						>
 							Info
@@ -37,6 +44,9 @@ const CardsPokemon = ({ url }) => {
 					</div>
 				</div>
 			)}
+			<Routes>
+				<Route path="/pokemon" element={<PokemonInfo info={data} />} />
+			</Routes>
 		</div>
 	);
 };

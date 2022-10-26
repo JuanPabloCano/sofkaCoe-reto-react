@@ -7,8 +7,6 @@ const Pokemon = () => {
 	const state = UseFetch(url);
 	const { loading, data } = state;
 
-	loading ? console.log('Loading') : console.log(data.results);
-
 	return (
 		<div>
 			{loading ? (

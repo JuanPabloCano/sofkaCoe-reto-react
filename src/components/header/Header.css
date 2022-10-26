@@ -1,0 +1,10 @@
+.title-div {
+  background-color: grey;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: yellow;
+}
