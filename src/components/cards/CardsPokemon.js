@@ -1,6 +1,6 @@
 import React from 'react';
 import { UseFetch } from '../UseFetch';
-import { Route, Router, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import PokemonInfo from './PokemonInfo';
 
 const CardsPokemon = ({ url }) => {
